@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poznaj ciekawostki o pandzie</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      background: #f0f8ff;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2e8b57;
+    }
+    .buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #246b45;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Poznaj ciekawostki o pandzie</h1>
+
+  <div class="buttons">
+    <button onclick="setLanguage('pl')">Polski</button>
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('de')">Deutsch</button>
+  </div>
+
+  <div id="content">
+    <p>  
+      Panda wielka to jeden z najbardziej rozpoznawalnych i uwielbianych zwierząt na świecie. 
+      Jest symbolem ochrony przyrody i zagrożonych gatunków. 
+      Panda zamieszkuje lasy bambusowe w Chinach i odżywia się niemal wyłącznie bambusem, chociaż czasem zjada też drobne zwierzęta lub owoce. 
+      Te sympatyczne zwierzęta mają charakterystyczne czarno-białe umaszczenie oraz okrągłe ciało, co czyni je wyjątkowymi i łatwymi do rozpoznania. 
+      Pomimo swojego uroczego wyglądu, pandy wielkie są dość silne i potrafią wspinać się po drzewach. 
+      Niestety, ze względu na utratę siedlisk i niską liczbę potomstwa, pandy są gatunkiem zagrożonym, dlatego w Chinach i na całym świecie prowadzi się programy ochrony tych zwierząt.
+    </p>
+    <p>
+      Ciekawostką jest to, że choć panda jest ssakiem z rzędu drapieżnych, jej dieta składa się w około 99% z bambusa. 
+      Bambus jest jednak ubogi w składniki odżywcze, dlatego panda musi jeść go bardzo dużo – nawet do 40 kg dziennie! 
+      To zajmuje większość jej czasu, resztę spędza na odpoczynku i zabawie.
+    </p>
+    <p>
+      Pandę wielką można spotkać głównie w górskich rejonach chińskiej prowincji Syczuan, a także w pobliskich prowincjach Gansu i Shaanxi. 
+      Zwierzę to jest symbolem chińskiej ochrony przyrody i narodowym skarbem Chin.
+    </p>
+  </div>
+
+  <script>
+    const texts = {
+      pl: {
+        title: "Poznaj ciekawostki o pandzie",
+        content: `
+          <p>  
+            Panda wielka to jeden z najbardziej rozpoznawalnych i uwielbianych zwierząt na świecie. 
+            Jest symbolem ochrony przyrody i zagrożonych gatunków. 
+            Panda zamieszkuje lasy bambusowe w Chinach i odżywia się niemal wyłącznie bambusem, chociaż czasem zjada też drobne zwierzęta lub owoce. 
+            Te sympatyczne zwierzęta mają charakterystyczne czarno-białe umaszczenie oraz okrągłe ciało, co czyni je wyjątkowymi i łatwymi do rozpoznania. 
+            Pomimo swojego uroczego wyglądu, pandy wielkie są dość silne i potrafią wspinać się po drzewach. 
+            Niestety, ze względu na utratę siedlisk i niską liczbę potomstwa, pandy są gatunkiem zagrożonym, dlatego w Chinach i na całym świecie prowadzi się programy ochrony tych zwierząt.
+          </p>
+          <p>
+            Ciekawostką jest to, że choć panda jest ssakiem z rzędu drapieżnych, jej dieta składa się w około 99% z bambusa. 
+            Bambus jest jednak ubogi w składniki odżywcze, dlatego panda musi jeść go bardzo dużo – nawet do 40 kg dziennie! 
+            To zajmuje większość jej czasu, resztę spędza na odpoczynku i zabawie.
+          </p>
+          <p>
+            Pandę wielką można spotkać głównie w górskich rejonach chińskiej prowincji Syczuan, a także w pobliskich prowincjach Gansu i Shaanxi. 
+            Zwierzę to jest symbolem chińskiej ochrony przyrody i narodowym skarbem Chin.
+          </p>
+        `
+      },
+      en: {
+        title: "Discover Interesting Facts About the Panda",
+        content: `
+          <p>
+            The giant panda is one of the most recognizable and beloved animals in the world. 
+            It is a symbol of wildlife conservation and endangered species. 
+            The panda inhabits bamboo forests in China and feeds almost exclusively on bamboo, although it sometimes eats small animals or fruits. 
+            These charming animals have distinctive black-and-white markings and a round body, making them unique and easy to recognize. 
+            Despite their cute appearance, giant pandas are quite strong and can climb trees. 
+            Unfortunately, due to habitat loss and low offspring numbers, pandas are an endangered species, so conservation programs are conducted in China and worldwide.
+          </p>
+          <p>
+            An interesting fact is that although the panda is a mammal from the carnivore order, its diet consists of about 99% bamboo. 
+            Bamboo is poor in nutrients, so the panda has to eat a lot – up to 40 kg a day! 
+            This takes up most of its time, and the rest it spends resting and playing.
+          </p>
+          <p>
+            Giant pandas can mainly be found in the mountainous regions of China's Sichuan province, as well as nearby Gansu and Shaanxi provinces. 
+            This animal is a symbol of Chinese wildlife conservation and a national treasure of China.
+          </p>
+        `
+      },
+      de: {
+        title: "Entdecke interessante Fakten über den Panda",
+        content: `
+          <p>
+            Der Große Panda ist eines der bekanntesten und beliebtesten Tiere der Welt. 
+            Er ist ein Symbol für Naturschutz und bedrohte Arten. 
+            Der Panda lebt in Bambuswäldern in China und ernährt sich fast ausschließlich von Bambus, obwohl er manchmal auch kleine Tiere oder Früchte frisst. 
+            Diese sympathischen Tiere haben ein charakteristisches schwarz-weißes Fell und einen runden Körper, was sie einzigartig und leicht erkennbar macht. 
+            Trotz ihres niedlichen Aussehens sind Große Pandas ziemlich stark und können auf Bäume klettern. 
+            Leider sind Pandas aufgrund des Lebensraumverlusts und der geringen Nachkommenzahl eine gefährdete Art, weshalb in China und weltweit Schutzprogramme durchgeführt werden.
+          </p>
+          <p>
+            Eine interessante Tatsache ist, dass der Panda zwar ein Säugetier aus der Ordnung der Raubtiere ist, seine Ernährung jedoch zu etwa 99 % aus Bambus besteht. 
+            Bambus ist jedoch nährstoffarm, weshalb der Panda sehr viel davon essen muss – bis zu 40 kg pro Tag! 
+            Das nimmt die meiste Zeit in Anspruch, den Rest verbringt er mit Ruhen und Spielen.
+          </p>
+          <p>
+            Große Pandas sind hauptsächlich in den Bergregionen der chinesischen Provinz Sichuan sowie in den angrenzenden Provinzen Gansu und Shaanxi zu finden. 
+            Dieses Tier ist ein Symbol für den chinesischen Naturschutz und ein nationales Schatz Chinas.
+          </p>
+        `
+      }
+    };
+
+    function setLanguage(lang) {
+      document.getElementById('title').innerText = texts[lang].title;
+      document.getElementById('content').innerHTML = texts[lang].content;
+    }
+  </script>
+
+</body>
+</html>
